@@ -28,8 +28,8 @@ public interface ProductoClientRest {
 	public Producto crear(@RequestBody Producto producto);
 	
 	@PutMapping("/editar/{id}")
-	public Producto editar(@RequestBody Producto producto, @PathVariable Long id);
+	public Producto editar(@RequestBody Producto producto, @PathVariable("id") Long id);
 	
 	@DeleteMapping("/eliminar/{id}")
-	public void eliminar(@PathVariable Long id);
+	public void eliminar(@PathVariable("id") Long id);
 }
